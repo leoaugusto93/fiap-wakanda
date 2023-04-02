@@ -1,0 +1,14 @@
+/*-------- =======================
+@MEDIA 768px START --*/
+@media only screen and (max-width: 768px) {
+
+    /*---- =======================
+    MENU SUPERIOR START ----*/
+    nav.navbar > .container > .navbar-brand > img {
+        width: 8rem
+    }
+    /*---- =======================
+    MENU SUPERIOR END ------*/
+}
+/*-------- =======================
+@media 768px END ----*/

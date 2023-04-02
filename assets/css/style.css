@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+:root {
+  --color-white: #FFF;
+  --color-grey: #d0d0d4;
+  --color-red: #FF4040;
+  --color-blue: #3D9BE9;
+  --color-green: #74ED6F;
+  --color-yellow: #FFC03A;
+  --color-purple: #6C4CED;
+  --background-body: #FFF;
+  --background-card: #161B22;
+  --background-navbar: #FFF;
+  --background-navbar-transparent: rgba(255, 255, 255, 0.6);
+  --background-footer: #1D262D;
+  --background-footer-copyright: #293741;
+  --border-radius: .375rem;
+  --box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%);
+}
+[data-theme=dark],
+html[data-theme=dark] {
+  --background-body: #343A40;
+  --background-navbar: #3A444E;
+  --background-sidebar: #3A444E;
+  --background-sidebar-active: #1D2227;
+  --background-card: #3A444E;
+  --background-table: #FFF;
+  --background-table-thead: #3A444E;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-body);
+  scroll-behavior: smooth
+}
+
+/*---- =======================
+MENU SUPERIOR START ----*/
+nav.navbar {
+  min-height: 5rem;
+  background-color: var(--background-navbar);
+  transition: .3s
+}
+nav.navbar.scrolled {
+  background-color: var(--background-navbar-transparent);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(15px);
+}
+nav.navbar > .container > .navbar-brand {
+  margin-right: 1.5rem
+}
+nav.navbar > .container > .navbar-brand > img {
+  width: 12rem
+}
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link {
+  transition: .3s
+}
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link.active,
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link:hover {
+  color: var(--color-purple);
+  font-weight: bold
+}
+/*---- =======================
+MENU SUPERIOR END ------*/
+
+/*---- =======================
+MAIN START ------*/
+main {
+  width: 100%;
+  margin-top: 5rem
+}
+/*---- =======================
+MAIN END --------*/
+
+/*---- =======================
+SECTION START ---*/
+section.section-title {
+  padding: 0 0 2rem 0
+}
+section.section-title h2 {
+  margin-bottom: .6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase
+}
+section.section-title h2::after {
+  content: "";
+  width: 4rem;
+  height: .2rem;
+  margin: .25rem .625rem;
+  display: inline-block;
+  background: var(--color-purple)
+}
+section.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 1rem
+}
+section.section-home,
+section.section-home > .section-home-overlay {
+  width: 100%;
+  height: 80vh
+}
+section.section-home {
+  position: relative;
+  display: flex;
+  background: url(../images/home/fundo.png) top center;
+  background-size: cover
+}
+section.section-home > .section-home-overlay {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(61, 64, 91, 0.4) 40%, rgba(61, 64, 91, 0.95) 100%)
+}
+section.section-home > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1
+}
+section.section-home > .container > .section-home-info > h1 {
+  color: var(--color-yellow);
+  font-size: 2rem;
+  font-weight: bold
+}
+section.section-home > .container > .section-home-info > p {
+  color: var(--color-white);
+  font-size: 1rem
+}
+/*---- =======================
+SECTION END -----*/
+
+/*---- =======================
+ARTICLE START ---*/
+article.card-content {
+  padding: 4rem 0
+}
+article.card-content iframe {
+  width: 100%;
+  height: 25rem;
+  border: 0;
+  border-radius: .25rem
+}
+article.card-content.bg-card {
+  color: var(--color-grey);
+  background-color: var(--background-card)
+}
+/*---- =======================
+ARTICLE END -----*/
+
+/*---- =======================
+FOOTER START ----*/
+footer {
+  margin-top: 1.4rem;
+  color: #869FB2;
+  background-color: var(--background-footer)
+}
+footer h6 {
+  font-weight: 500
+}
+footer p {
+  margin-bottom: .6rem;
+}
+footer .footer-copyright {
+  padding: 1rem;
+  background-color: var(--background-footer-copyright)
+}
+footer .footer-copyright .footer-social-button {
+  margin: .4rem;
+  color: #869FB2;
+  font-size: 1.4rem;
+  text-decoration: none
+}
+footer .footer-copyright > .container > .row {
+  display: flex;
+  align-items: center
+}
+/*---- =======================
+FOOTER END ------*/
